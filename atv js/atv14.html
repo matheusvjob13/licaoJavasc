@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function inverterOrdemPalavras(str) {
+  const palavras = str.split(' ');
+  const palavrasReversas = palavras.reverse();
+  const resultado = palavrasReversas.join(' ');
+  return resultado;
+}
+
+
+const texto = "Esta é uma frase para testar";
+const textoInvertido = inverterOrdemPalavras(texto);
+console.log(textoInvertido);
+
+    </script>
+</body>
+</html>

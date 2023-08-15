@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+const item1 = {
+  nome: "Camiseta",
+  preco: 20.99,
+  quantidade: 2
+};
+
+const item2 = {
+  nome: "Calça",
+  preco: 39.99,
+  quantidade: 1
+};
+
+const item3 = {
+  nome: "Sapato",
+  preco: 59.99,
+  quantidade: 1
+};
+
+const carrinhoDeCompras = [item1, item2, item3];
+
+
+function calcularTotal(carrinho) {
+  let total = 0;
+  for (let i = 0; i < carrinho.length; i++) {
+    total += carrinho[i].preco * carrinho[i].quantidade;
+  }
+  return total;
+}
+
+
+console.log("Itens no carrinho:");
+for (let i = 0; i < carrinhoDeCompras.length; i++) {
+  const item = carrinhoDeCompras[i];
+  console.log(`${item.nome} - Quantidade: ${item.quantidade} - Preço: $${item.preco.toFixed(2)}`);
+}
+console.log("Total do carrinho: $" + calcularTotal(carrinhoDeCompras).toFixed(2));
+
+    </script>
+</body>
+</html>
